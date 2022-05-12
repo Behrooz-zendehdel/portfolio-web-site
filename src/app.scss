@@ -6,9 +6,17 @@
     background-color: aquamarine;
     position: relative;
     top: 70px;
+    scroll-behavior: smooth; //narm tar miad bala scroll
+    scroll-snap-type: y mandatory; //--> marbot be tozihate paeen
+    scrollbar-width: none; //for firefox
+    &::-webkit-scrollbar {
+      display: none; // vase hidden kardane scrolbare
+    }
     > * {
       width: 100vw;
       height: calc(100vh - 70px);
+
+      scroll-snap-align: start; // scroller vase ine k safhe automat age az nesf bishtar biad paeein khudesh miad ro section badi
     }
   }
 }
